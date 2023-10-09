@@ -1,6 +1,6 @@
 # bengkeline
 
-A new Flutter project.
+A flutter slice project of my team UI Design, bengkeline.
 
 ## Getting Started
 
