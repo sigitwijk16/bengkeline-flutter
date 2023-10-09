@@ -1,4 +1,5 @@
 import 'package:bengkeline/custom_resources/text_primary.dart';
+import 'package:bengkeline/pages/on_boarding1.dart';
 import 'package:bengkeline/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -127,6 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     horizontal: 16, vertical: 2),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
                                   children: <Widget>[
                                     Container(
                                       width: 12,
@@ -148,6 +150,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 16, vertical: 2),
                                 child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
                                   children: <Widget>[
                                     Container(
                                       width: 12,
@@ -171,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 32.0),
+              SizedBox(height: 24.0),
               Padding(
                 padding: const EdgeInsets.only(left: 16),
                 child: Row(
@@ -183,14 +187,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 4),
+              SizedBox(height: 4.0),
               SingleChildScrollView(
                 child: Column(
                   children: [
                     Column(
                       children: <Widget>[
                         SizedBox(
-                          height: 200, // Set the height of the carousel.
+                          height: 164, // Set the height of the carousel.
                           child: PageView.builder(
                             controller: _pageController,
                             itemCount: imageList.length,
@@ -221,13 +225,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 16),
                 child: Row(
                   children: <Widget>[
                     Text(
-                      'Apa yang Anda butuhkan?',
+                      'Apa yang Anda Butuhkan?',
                       style: TextPrimary.heading2,
                     ),
                   ],
@@ -241,7 +245,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 16),
+                    margin: EdgeInsets.symmetric(horizontal: 12),
                     child: InkWell(
                       onTap: () {}, // Handle your callback.
                       splashColor: Colors.black.withOpacity(0.3),
@@ -251,14 +255,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('assets/icons/menu_button1.png'),
-                            fit: BoxFit.contain,
+                            fit: BoxFit.scaleDown,
                           ),
                         ),
                       ),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 16),
+                    margin: EdgeInsets.symmetric(horizontal: 12),
                     child: InkWell(
                       onTap: () {}, // Handle your callback.
                       splashColor: Colors.black.withOpacity(0.3),
@@ -268,14 +272,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('assets/icons/menu_button2.png'),
-                            fit: BoxFit.contain,
+                            fit: BoxFit.scaleDown,
                           ),
                         ),
                       ),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 16),
+                    margin: EdgeInsets.symmetric(horizontal: 12),
                     child: InkWell(
                       onTap: () {}, // Handle your callback.
                       splashColor: Colors.black.withOpacity(0.3),
@@ -285,14 +289,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('assets/icons/menu_button3.png'),
-                            fit: BoxFit.contain,
+                            fit: BoxFit.scaleDown,
                           ),
                         ),
                       ),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 16),
+                    margin: EdgeInsets.symmetric(horizontal: 12),
                     child: InkWell(
                       onTap: () {}, // Handle your callback.
                       splashColor: Colors.black.withOpacity(0.3),
@@ -302,7 +306,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('assets/icons/menu_button4.png'),
-                            fit: BoxFit.contain,
+                            fit: BoxFit.scaleDown,
                           ),
                         ),
                       ),
@@ -313,10 +317,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           SizedBox(
-            height: 64,
-          ),
-          SizedBox(
-            height: 4,
+            height: 40,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -403,7 +404,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              SplashScreen()), // Replace NextScreen with your destination screen.
+                              OnboardingPage1()), // Replace NextScreen with your destination screen.
                     );
                   },
                   child: Ink(
